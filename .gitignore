@@ -18,6 +18,9 @@ OLD-output/
 **/book/*.pdf
 **/book/*.midi
 
+# Make creates a file for use by management tools.
+referenced-includes.txt
+
 # Archives
 *.tgz
 *.tar
