@@ -18,7 +18,8 @@ OLD-output/
 **/book/*.pdf
 **/book/*.midi
 
-# Make creates a file for use by management tools.
+# Make creates somes files that should be ignored.
+deps.mk
 referenced-includes.txt
 
 # Archives
