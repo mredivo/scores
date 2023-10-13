@@ -53,7 +53,6 @@
 }
 
 % 3. Rondeau
-\pageBreak
 \score {
   \new ChoirStaff <<
     \new Staff  \with { midiInstrument = "acoustic grand" }
@@ -132,6 +131,7 @@
 }
 
 % 6. Tambourin
+\pageBreak
 \score {
   \new ChoirStaff <<
     \new Staff  \with { midiInstrument = "acoustic grand" }

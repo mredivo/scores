@@ -4,7 +4,16 @@
 \include "../include/baroque-paper.ily"
 \include "../include/midi.ily"
 
+% For development, we want the line breaks to match the source manuscript.
+% To achieve this, we use a smaller staff size and insert a macro \mBreak
+% that expands to a line break.
 #(set-global-staff-size 19.8)
+mBreak = { \break }
+
+% For final generation, we use our preferred staff size, and redefine
+% \mBreak as a no-op to let Lilypond choose line breaks.
+%#(set-global-staff-size 20.7)
+%mBreak = { }
 
 % Global settings should be applied to every staff.
 staffGlobalSettings = {
