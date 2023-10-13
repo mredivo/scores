@@ -21,7 +21,7 @@
     Suite:Piece:<item> =SaaPaa<item>
 %}
 
-title = "Pieces pour la Musette"
+title = "Pieces Pour la Musette"
 %subtitle = "Viele, Flute a bec, Flute traversiere, Hautbois, Dessus de Viole et Violon"
 subtitle = "Opus 5"
 composer = "Michel Corrette (1707-1795)"
