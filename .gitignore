@@ -18,11 +18,15 @@ OLD-output/
 **/book/*.pdf
 **/book/*.midi
 
-# Make creates somes files that should be ignored.
+# Make creates somes files that should be ignored
 deps.mk
 referenced-includes.txt
 
-# Archives
+# Don't save the output from bin/list-all-includerefs.sh
+/include-references.csv
+
+# Other files to be skipped
+*.swp
 *.tgz
 *.tar
 

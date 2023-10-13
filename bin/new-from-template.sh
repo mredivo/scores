@@ -1,7 +1,11 @@
 #!/bin/sh
+#
+# Create a directory structure for a new Lilypond score, and populate it
+# with skeleton score files from the template/ directory.
+#
 
 # Establish the repository base directory
-REPO_BASE=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )/.." &> /dev/null && pwd )
+REPO_BASE=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." &> /dev/null && pwd)
 
 # Perform validation of the input
 usage() {
@@ -30,6 +34,7 @@ if [ -d "$REPO_BASE/$1/$2" ]; then
     usage
 fi
 
+# Record the path to the project directory
 PROJECTDIR="$REPO_BASE/$1/$2"
 echo "Creating new project in \"$PROJECTDIR\""
 
@@ -67,7 +72,10 @@ else
     cp $REPO_BASE/template/piece_001.ily $PROJECTDIR/content
 fi
 # Anchor the Makefile to its depth in the filesystem hierarchy
-sed -e "s!XX_DEPTH_XX!$DEPTH!" -e "s!XX_REPO_BASE_XX!$REPO_BASE!" $REPO_BASE/template/Makefile > $PROJECTDIR/Makefile
+sed \
+    -e "s!XX_DEPTH_XX!$DEPTH!" \
+    -e "s!XX_REPO_BASE_XX!$REPO_BASE!" \
+    $REPO_BASE/template/Makefile > $PROJECTDIR/Makefile
 
 # Build the example project
 cd $PROJECTDIR && make deps midi=1 all
