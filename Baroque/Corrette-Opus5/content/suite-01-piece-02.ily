@@ -2,12 +2,12 @@
 
 %% Suite I, 2. Vivement
 %%=============================================================
-SaaMabPiece = "II. Vivement"
-SaaMabOpus = ""
-SaaMabMidiTempo = 20
+SaaPabPiece = "II. Vivement"
+SaaPabOpus = ""
+SaaPabMidiTempo = 20
 
 %% Treble staff
-SaaMabVaa = \relative c''' {
+SaaPabVaa = \relative c''' {
   \key c \major
   \time 2/4
   \repeat volta 2 {
@@ -27,7 +27,7 @@ SaaMabVaa = \relative c''' {
 }
 
 %% Bass staff
-SaaMabVab = \relative c' {
+SaaPabVab = \relative c' {
   \key c \major
   \time 2/4
   \repeat volta 2 {
@@ -47,7 +47,7 @@ SaaMabVab = \relative c' {
 }
 
 %% Figured bass
-SaaMabFig = \figuremode {
+SaaPabFig = \figuremode {
   \repeat volta 2 {
     \partial 4 s4 |
     s2 |

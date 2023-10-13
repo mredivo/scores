@@ -6,7 +6,7 @@
       {
         \global
         \voiceIIConstants
-        \SaaMabVab
+        \SaaPabVab
       }
-      \new FiguredBass { \SaaMabFig }
+      \new FiguredBass { \SaaPabFig }
       %}

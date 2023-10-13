@@ -2,12 +2,12 @@
 
 %% Suite I, 5. Fanfare
 %%=============================================================
-SaaMaePiece = "V. Fanfare"
-SaaMaeOpus = ""
-SaaMaeMidiTempo = 36
+SaaPaePiece = "V. Fanfare"
+SaaPaeOpus = ""
+SaaPaeMidiTempo = 36
 
 %% Treble staff
-SaaMaeVaa = \relative c'' {
+SaaPaeVaa = \relative c'' {
   \key c \major
   \time 6/8
   \repeat volta 2 {
@@ -47,7 +47,7 @@ SaaMaeVaa = \relative c'' {
 }
 
 %% Bass staff
-SaaMaeVab = \relative c {
+SaaPaeVab = \relative c {
   \key c \major
   \partial 8 r8 |
   r4. r4 g8 |
@@ -82,7 +82,7 @@ SaaMaeVab = \relative c {
 }
 
 %% Figured bass
-SaaMaeFig = \figuremode {
+SaaPaeFig = \figuremode {
   \partial 8 s8 |
   s4. s |
   s4. <6>4 s8 |

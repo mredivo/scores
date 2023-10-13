@@ -2,12 +2,12 @@
 
 %% Suite I, 6. Tambourin
 %%=============================================================
-SaaMafPiece = "VI. Tambourin"
-SaaMafOpus = ""
-SaaMafMidiTempo = 20
+SaaPafPiece = "VI. Tambourin"
+SaaPafOpus = ""
+SaaPafMidiTempo = 20
 
 %% Treble staff
-SaaMafVaa = \relative c''' {
+SaaPafVaa = \relative c''' {
   \key c \major
   \time 2/8
   % Default beaming for 2/8 doesn't beam pairs of eigths; this fixes it
@@ -39,7 +39,7 @@ SaaMafVaa = \relative c''' {
 }
 
 %% Bass staff
-SaaMafVab = \relative c {
+SaaPafVab = \relative c {
   \key c \major
   \time 2/8
   \set Staff.beatStructure = 2,2
@@ -67,7 +67,7 @@ SaaMafVab = \relative c {
 }
 
 %% Figured bass
-SaaMafFig = \figuremode {
+SaaPafFig = \figuremode {
   \time 2/8
   s4 |
   s4 |

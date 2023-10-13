@@ -2,12 +2,12 @@
 
 %% Suite I, Rondeau
 %%=============================================================
-SaaMaaPiece = "I. Rondeau"
-SaaMaaOpus = ""
-SaaMaaMidiTempo = 35
+SaaPaaPiece = "I. Rondeau"
+SaaPaaOpus = ""
+SaaPaaMidiTempo = 35
 
 %% Treble staff
-SaaMaaVaa = \relative c'' {
+SaaPaaVaa = \relative c'' {
   \repeat segno 2 {
     \key c \major
     \time 2/2
@@ -56,7 +56,7 @@ SaaMaaVaa = \relative c'' {
 }
 
 %% Bass staff
-SaaMaaVab = \relative c' {
+SaaPaaVab = \relative c' {
   \key c \major
   \time 2/2
   \override Staff.TimeSignature.style = #'single-digit
@@ -97,7 +97,7 @@ SaaMaaVab = \relative c' {
 }
 
 %% Figured bass
-SaaMaaFig = \figuremode {
+SaaPaaFig = \figuremode {
   \time 2/2
   \partial 2 s4 <5/> |
   s1 |

@@ -2,12 +2,12 @@
 
 %%Suite I, 8. Le Coucou
 %%=============================================================
-SaaMahPiece = "VIII. Le Coucou"
-SaaMahOpus = ""
-SaaMahMidiTempo = 20
+SaaPahPiece = "VIII. Le Coucou"
+SaaPahOpus = ""
+SaaPahMidiTempo = 20
 
 %% Treble staff
-SaaMahVaa = \relative c''' {
+SaaPahVaa = \relative c''' {
   \key c \major
   \time 9/8
   \repeat volta 2 {
@@ -21,7 +21,7 @@ SaaMahVaa = \relative c''' {
 }
 
 %% Bass staff
-SaaMahVab = \relative c {
+SaaPahVab = \relative c {
   \key c \major
   \time 9/8
    \partial 8 r8 |
@@ -29,7 +29,7 @@ SaaMahVab = \relative c {
 }
 
 %% Figured bass
-SaaMahFig = \figuremode {
+SaaPahFig = \figuremode {
   \time 9/8
    \partial 8 s8 |
    s4 <6>8 s4. <5/>4. |

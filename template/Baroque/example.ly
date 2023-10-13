@@ -50,22 +50,22 @@ staffBSettings = {
     {
       \staffGlobalSettings
       \staffASettings
-      \SaaMaaVaa
+      \SaaPaaVaa
     }
     \new Staff = "figuredStaff"  \with { midiInstrument = "acoustic bass" }
-    \SaaMaaFig
+    \SaaPaaFig
     \context Staff = "figuredStaff"
     {
       \staffGlobalSettings
       \staffBSettings
-      \SaaMaaVab
+      \SaaPaaVab
     }
   >>
   \header {
-    piece = \SaaMaaPiece
-    opus = \markup { \italic { \SaaMaaOpus }}
+    piece = \SaaPaaPiece
+    opus = \markup { \italic { \SaaPaaOpus }}
   }
     \include "../include/baroque-layout.ily"
-    \insertMidi \SaaMaaMidiTempo
+    \insertMidi \SaaPaaMidiTempo
   }
 }

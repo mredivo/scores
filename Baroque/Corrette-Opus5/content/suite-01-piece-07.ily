@@ -2,12 +2,12 @@
 
 %% Suite I, 7. Chaconne
 %%=============================================================
-SaaMagPiece = "VII. Chaconne"
-SaaMagOpus = ""
-SaaMagMidiTempo = 20
+SaaPagPiece = "VII. Chaconne"
+SaaPagOpus = ""
+SaaPagMidiTempo = 20
 
 %% Treble staff
-SaaMagVaa = \relative c'' {
+SaaPagVaa = \relative c'' {
   \key c \major
   \time 3/4
   \override Staff.TimeSignature.style = #'single-digit
@@ -16,7 +16,7 @@ SaaMagVaa = \relative c'' {
 }
 
 %% Bass staff
-SaaMagVab = \relative c {
+SaaPagVab = \relative c {
   \key c \major
   \time 3/4
   \override Staff.TimeSignature.style = #'single-digit
@@ -25,7 +25,7 @@ SaaMagVab = \relative c {
 }
 
 %% Figured bass
-SaaMagFig = \figuremode {
+SaaPagFig = \figuremode {
   \partial 2 s2  |
   s2 <6>4 |
 }

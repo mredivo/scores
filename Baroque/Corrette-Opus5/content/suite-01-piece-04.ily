@@ -2,12 +2,12 @@
 
 %% Suite I, 4. Menuet
 %%=============================================================
-SaaMadPiece = "IV. Menuet"
-SaaMadOpus = ""
-SaaMadMidiTempo = 32
+SaaPadPiece = "IV. Menuet"
+SaaPadOpus = ""
+SaaPadMidiTempo = 32
 
 %% Treble staff
-SaaMadVaa = \relative c''' {
+SaaPadVaa = \relative c''' {
   % Menuet 1
   \key c \major
   \time 3/4
@@ -81,7 +81,7 @@ SaaMadVaa = \relative c''' {
 }
 
 %% Bass staff
-SaaMadVab = \relative c {
+SaaPadVab = \relative c {
   \key c \major
   \time 3/4
   \override Staff.TimeSignature.style = #'single-digit
@@ -143,7 +143,7 @@ SaaMadVab = \relative c {
 }
 
 %% Figured bass
-SaaMadFig = \figuremode {
+SaaPadFig = \figuremode {
   \time 3/4
   s2. |
   s2 <6>4 |

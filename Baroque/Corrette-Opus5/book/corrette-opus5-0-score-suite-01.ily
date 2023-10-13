@@ -7,23 +7,23 @@
     {
       \staffGlobalSettings
       \staffASettings
-      \SaaMaaVaa
+      \SaaPaaVaa
     }
-    \new Staff = "SaaMaaFigStaff"  \with { midiInstrument = "acoustic bass" }
-    \SaaMaaFig
-    \context Staff = "SaaMaaFigStaff"
+    \new Staff = "SaaPaaFigStaff"  \with { midiInstrument = "acoustic bass" }
+    \SaaPaaFig
+    \context Staff = "SaaPaaFigStaff"
     {
       \staffGlobalSettings
       \staffBSettings
-      \SaaMaaVab
+      \SaaPaaVab
     }
   >>
   \header {
-    piece = \SaaMaaPiece
-    opus = \markup { \italic { \SaaMaaOpus }}
+    piece = \SaaPaaPiece
+    opus = \markup { \italic { \SaaPaaOpus }}
   }
   \include "../include/baroque-layout.ily"
-  \insertMidi \SaaMaaMidiTempo
+  \insertMidi \SaaPaaMidiTempo
 }
 
 % 2. Vivement
@@ -33,23 +33,23 @@
     {
       \staffGlobalSettings
       \staffASettings
-      \SaaMabVaa
+      \SaaPabVaa
     }
-    \new Staff = "SaaMabFigStaff"  \with { midiInstrument = "acoustic bass" }
-    \SaaMabFig
-    \context Staff = "SaaMabFigStaff"
+    \new Staff = "SaaPabFigStaff"  \with { midiInstrument = "acoustic bass" }
+    \SaaPabFig
+    \context Staff = "SaaPabFigStaff"
     {
       \staffGlobalSettings
       \staffBSettings
-      \SaaMabVab
+      \SaaPabVab
     }
   >>
   \header {
-    piece = \SaaMabPiece
-    opus = \markup { \italic { \SaaMabOpus }}
+    piece = \SaaPabPiece
+    opus = \markup { \italic { \SaaPabOpus }}
   }
   \include "../include/baroque-layout.ily"
-  \insertMidi \SaaMabMidiTempo
+  \insertMidi \SaaPabMidiTempo
 }
 
 % 3. Rondeau
@@ -60,23 +60,23 @@
     {
       \staffGlobalSettings
       \staffASettings
-      \SaaMacVaa
+      \SaaPacVaa
     }
     \new Staff = "figuredStaff"  \with { midiInstrument = "acoustic bass" }
-    \SaaMacFig
+    \SaaPacFig
     \context Staff = "figuredStaff"
     {
       \staffGlobalSettings
       \staffBSettings
-      \SaaMacVab
+      \SaaPacVab
     }
   >>
   \header {
-    piece = \SaaMacPiece
-    opus = \markup { \italic { \SaaMacOpus }}
+    piece = \SaaPacPiece
+    opus = \markup { \italic { \SaaPacOpus }}
   }
   \include "../include/baroque-layout.ily"
-  \insertMidi \SaaMacMidiTempo
+  \insertMidi \SaaPacMidiTempo
 }
 
 % 4. Menuet
@@ -86,23 +86,23 @@
     {
       \staffGlobalSettings
       \staffASettings
-      \SaaMadVaa
+      \SaaPadVaa
     }
     \new Staff = "figuredStaff"  \with { midiInstrument = "acoustic bass" }
-    \SaaMadFig
+    \SaaPadFig
     \context Staff = "figuredStaff"
     {
       \staffGlobalSettings
       \staffBSettings
-      \SaaMadVab
+      \SaaPadVab
     }
   >>
   \header {
-    piece = \SaaMadPiece
-    opus = \markup { \italic { \SaaMadOpus }}
+    piece = \SaaPadPiece
+    opus = \markup { \italic { \SaaPadOpus }}
   }
   \include "../include/baroque-layout.ily"
-  \insertMidi \SaaMadMidiTempo
+  \insertMidi \SaaPadMidiTempo
 }
 
 % 5. Fanfare
@@ -112,23 +112,23 @@
     {
       \staffGlobalSettings
       \staffASettings
-      \SaaMaeVaa
+      \SaaPaeVaa
     }
     \new Staff = "figuredStaff"  \with { midiInstrument = "acoustic bass" }
-    \SaaMaeFig
+    \SaaPaeFig
     \context Staff = "figuredStaff"
     {
       \staffGlobalSettings
       \staffBSettings
-      \SaaMaeVab
+      \SaaPaeVab
     }
   >>
   \header {
-    piece = \SaaMaePiece
-    opus = \markup { \italic { \SaaMaeOpus }}
+    piece = \SaaPaePiece
+    opus = \markup { \italic { \SaaPaeOpus }}
   }
   \include "../include/baroque-layout.ily"
-  \insertMidi \SaaMaeMidiTempo
+  \insertMidi \SaaPaeMidiTempo
 }
 
 % 6. Tambourin
@@ -138,23 +138,23 @@
     {
       \staffGlobalSettings
       \staffASettings
-      \SaaMafVaa
+      \SaaPafVaa
     }
     \new Staff = "figuredStaff"  \with { midiInstrument = "acoustic bass" }
-    \SaaMafFig
+    \SaaPafFig
     \context Staff = "figuredStaff"
     {
       \staffGlobalSettings
       \staffBSettings
-      \SaaMafVab
+      \SaaPafVab
     }
   >>
   \header {
-    piece = \SaaMafPiece
-    opus = \markup { \italic { \SaaMafOpus }}
+    piece = \SaaPafPiece
+    opus = \markup { \italic { \SaaPafOpus }}
   }
   \include "../include/baroque-layout.ily"
-  \insertMidi \SaaMafMidiTempo
+  \insertMidi \SaaPafMidiTempo
 }
 
 % 7. Chaconne
@@ -164,23 +164,23 @@
     {
       \staffGlobalSettings
       \staffASettings
-      \SaaMagVaa
+      \SaaPagVaa
     }
     \new Staff = "figuredStaff"  \with { midiInstrument = "acoustic bass" }
-    \SaaMagFig
+    \SaaPagFig
     \context Staff = "figuredStaff"
     {
       \staffGlobalSettings
       \staffBSettings
-      \SaaMagVab
+      \SaaPagVab
     }
   >>
   \header {
-    piece = \SaaMagPiece
-    opus = \markup { \italic { \SaaMagOpus }}
+    piece = \SaaPagPiece
+    opus = \markup { \italic { \SaaPagOpus }}
   }
   \include "../include/baroque-layout.ily"
-  \insertMidi \SaaMagMidiTempo
+  \insertMidi \SaaPagMidiTempo
 }
 
 % 8. Le Coucou
@@ -190,21 +190,21 @@
     {
       \staffGlobalSettings
       \staffASettings
-      \SaaMahVaa
+      \SaaPahVaa
     }
     \new Staff = "figuredStaff"  \with { midiInstrument = "acoustic bass" }
-    \SaaMahFig
+    \SaaPahFig
     \context Staff = "figuredStaff"
     {
       \staffGlobalSettings
       \staffBSettings
-      \SaaMahVab
+      \SaaPahVab
     }
   >>
   \header {
-    piece = \SaaMahPiece
-    opus = \markup { \italic { \SaaMahOpus }}
+    piece = \SaaPahPiece
+    opus = \markup { \italic { \SaaPahOpus }}
   }
   \include "../include/baroque-layout.ily"
-  \insertMidi \SaaMahMidiTempo
+  \insertMidi \SaaPahMidiTempo
 }

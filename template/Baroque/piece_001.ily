@@ -2,12 +2,12 @@
 
 %% Suite I, 2. Vivement
 %%=============================================================
-SaaMaaPiece = "Two-part Invention"
-SaaMaaOpus = "Initial Plunge"
-SaaMaaMidiTempo = 20
+SaaPaaPiece = "Two-part Invention"
+SaaPaaOpus = "Initial Plunge"
+SaaPaaMidiTempo = 20
 
 %% Treble staff
-SaaMaaVaa = \relative c''' {
+SaaPaaVaa = \relative c''' {
   \key c \major
   \time 2/4
   \repeat volta 2 {
@@ -27,7 +27,7 @@ SaaMaaVaa = \relative c''' {
 }
 
 %% Bass staff
-SaaMaaVab = \relative c' {
+SaaPaaVab = \relative c' {
   \key c \major
   \time 2/4
   \repeat volta 2 {
@@ -47,7 +47,7 @@ SaaMaaVab = \relative c' {
 }
 
 %% Figured bass
-SaaMaaFig = \figuremode {
+SaaPaaFig = \figuremode {
   \repeat volta 2 {
     \partial 4 s4 |
     s2 |
