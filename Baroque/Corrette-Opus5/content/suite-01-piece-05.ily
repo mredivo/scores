@@ -95,7 +95,7 @@ SaaPaeFig = \figuremode {
   \partial 8 s8 |
   s2. |
   s4. s |
-  <4>4. <6>4. |
+  <6 4>4. <6>4. |
   <6>4. s |
   s4. s |
   s4. s |
