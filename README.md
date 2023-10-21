@@ -25,3 +25,7 @@ is Lilypond 2.24.2.
   [Frescobaldi](https://www.frescobaldi.org/) to edit files and build
   projects; indeed, I recommend Frescobaldi (3.3.0 or newer) for your own
   score editing and compiling.
+- If you want to use Make to build your scores, based on these or otherwise,
+  you will need some of the things in my
+  [lilyseed](https://github.com/mredivo/lilyseed) repository.
+  Specifically, you will need `bin/generate-dependencies.sh` to run `make deps`.
