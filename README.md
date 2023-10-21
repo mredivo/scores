@@ -11,10 +11,14 @@ Some projects are here because they augment what is already available at
 (the International Music Score Library Project / Petrucci Music Library).
 
 All of these projects are here because I believe them to be clear, well-organized
-working examples of Lilypond engraving files. They may even
-be good music.
+working examples of Lilypond engraving files. They may even be good music.
 
-This collection should continue to grow as I do more music engraving.
+**This repository is what I myself had hoped to find,
+when I first began exploring Lilypond.**
+
+In addition to music that I set for IMSLP, I will continue to add smaller
+works that demonstrate Lilypond techniques new to me. I hope you find
+them useful.
 
 ## Notes
 
