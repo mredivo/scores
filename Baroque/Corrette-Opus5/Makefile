@@ -4,7 +4,6 @@
 DEPTH		:= ../..	# usually "../.."
 REPO_BASE	:= /Users/marcus/Documents/Music/Lilypond_Root
 
-DISTHEADER	:= ./distribution-header.ly
 SOURCEDIR	:= ./book
 INCLUDEDIR	:= ./include
 CONTENTDIR	:= ./content
@@ -31,7 +30,7 @@ $(TARGETDIR)/%.pdf: $(SOURCEDIR)/%.ly
 		--loglevel=PROGRESS \
 		--pdf \
 		$(CLEFS) $(MIDI) $(PAPER) \
-		$<
+		`pwd`/$<
 
 $(TARGETDIR)/%.midi: $(SOURCEDIR)/%.ly
 	@echo "Producing $@"
@@ -42,7 +41,7 @@ $(TARGETDIR)/%.midi: $(SOURCEDIR)/%.ly
 		--loglevel=PROGRESS \
 		--pdf \
 		-dmidi $(CLEFS) $(PAPER) \
-		$<
+		`pwd`/$<
 
 .PHONY: all
 all: $(PDFS)
@@ -59,15 +58,17 @@ deps:
 clean: cleanpdf cleanmidi
 
 .PHONY: cleanpdf
-# Frescobaldi writes its output to the source dir.
+# Frescobaldi writes its output to the directory where it finds the source file.
 cleanpdf:
 	rm -f $(TARGETDIR)/*pdf
 	rm -f $(SOURCEDIR)/*pdf
+	rm -f $(CONTENTDIR)/*pdf
 
 .PHONY: cleanmidi
 # Frescobaldi writes its output to the source dir.
 cleanmidi:
 	rm -f $(TARGETDIR)/*midi
 	rm -f $(SOURCEDIR)/*midi
+	rm -f $(CONTENTDIR)/*midi
 
 include deps.mk

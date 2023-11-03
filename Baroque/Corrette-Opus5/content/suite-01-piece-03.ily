@@ -1,17 +1,16 @@
 \version "2.24.2"
 
-%% Suite I, 3. Rondeau
-%%=============================================================
+% Suite I, 3. Rondeau
+%=============================================================
 SaaPacPiece = "III. Rondeau"
-SaaPacOpus = ""
+SaaPacOpus = "Opus 5 Suite I"
 SaaPacMidiTempo = 35
 
-%% Treble staff
+% Treble staff
 SaaPacVaa = \relative c'' {
-  \repeat segno 2 {
+  \repeat volta 2 {
     \key c \major
     \time 2/2
-    \override Staff.TimeSignature.style = #'single-digit
     \partial 2 c4 g' |
     f8 e d e f e d c |
     d4 g, c c8 d |
@@ -20,11 +19,11 @@ SaaPacVaa = \relative c'' {
     f8 e d e f e d c |
     d4 g, g' g |
     g4 f8 e d4.-+ c8 |
-    \partial 2 c2 | \fine
+    \partial 2 c2_\markup { \italic \lower #3 Fin. } |
     % Fin
     \bar ":|."
     % First couplet
-    \partial 2 g4^\markup { \italic { 1 \super er Couplet } } c |
+    \partial 2 g4_\markup { \italic \lower #3 { 1. \hspace #-1 \super r Couplet } } c |
     a4 b8 c d4 d |
     g,2 c8 d e c |
     d8 e f d f e d c |
@@ -35,24 +34,23 @@ SaaPacVaa = \relative c'' {
     \partial 2 g2 |
     \bar "||"
     % Second couplet
-    \partial 2 g4^\markup { \italic { 2 \super e Couplet } } g |
+    \partial 2 g4_\markup { \italic \lower #3 { 2. \hspace #-1 \super e Couplet } } g |
     c8 g c d e c e f |
     g8 e f g a f g a |
     g8 e f g f d e f |
     e8 f d e f g e f |
     d8 e c d b c a b |
     g8 c b c e c b c |
-    a8 d c d f d c d |
+    a8 d c d f d c_\markup { \italic \lower #3 "au rondeau" } d |
     \partial 2 d2-+ |
     \bar "||"
   }
 }
 
-%% Bass staff
+% Bass staff
 SaaPacVab = \relative c {
   \key c \major
   \time 2/2
-  \override Staff.TimeSignature.style = #'single-digit
   \partial 2 c4 c' |
   c2 b4 c |
   g8 a g f e f e d |
@@ -83,7 +81,7 @@ SaaPacVab = \relative c {
 
 }
 
-%% Figured bass
+% Figured bass
 SaaPacFig = \figuremode {
   \time 2/2
   \partial 2 s2 |
@@ -107,7 +105,7 @@ SaaPacFig = \figuremode {
   \partial 2 s2 |
   s1 |
   <6>2 s |
-  <6>4  s <6> <5/> |
+  <6>4 s <6> <5/> |
   s2 <5/>4 s |
   <4/ 2>4 <6> <6> s |
   <6>4 s s2 |

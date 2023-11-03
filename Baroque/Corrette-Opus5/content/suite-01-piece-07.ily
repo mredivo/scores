@@ -1,20 +1,19 @@
 \version "2.24.2"
 
-%% Suite I, 7. Chaconne
-%%=============================================================
+% Suite I, 7. Chaconne
+%=============================================================
 SaaPagPiece = "VII. Chaconne"
-SaaPagOpus = ""
+SaaPagOpus = "Opus 5 Suite I"
 SaaPagMidiTempo = 25
 
-%% Treble staff
+% Treble staff
 SaaPagVaa = \relative c'' {
   \key c \major
   \time 3/4
-  \override Staff.TimeSignature.style = #'single-digit
   \partial 2 e8 f g4 |
   a,4 d8 e f4 |
   g,4 c8 d8 e4 |
-  f8 e d e f  d |
+  f8 e d e f d |
   e8 d e f g4 |
   % 5
   a,4 d8 e f4 |
@@ -80,7 +79,8 @@ SaaPagVaa = \relative c'' {
   c8 e, d4.-+ c8 |
   % This is C minor, but we only want to show 2 flats
   \key g \minor
-  c4-\markup { \bold \italic  { Doux } } ees f |
+  \set Staff.forceClef = ##t % TODO: Do we want these?
+  c4-\markup { \bold \italic { Doux } } ees f |
   g4 c, aes' |
   g4 f8 ees d c |
   b4 c d |
@@ -107,10 +107,11 @@ SaaPagVaa = \relative c'' {
   r4 g'4. g8 |
   d4 g4. g8 |
   c,4 aes'8 g f ees |
-  d8 c b4. c8 |
+  d8 c b4.-+ c8 |
   % 80
   \key c \major
-  c8-\markup { \bold \italic  { fort } } c16 d e8 e16 f g8 g |
+  \set Staff.forceClef = ##t
+  c8-\markup { \bold \italic { fort } } c16 d e8 e16 f g8 g |
   d8 d16 e f8 f16 g a8 a | \mBreak
   e8 e16 f g8 g,16 a b8 b16 c |
   d8 g b, d g, b |
@@ -132,12 +133,11 @@ SaaPagVaa = \relative c'' {
   \bar "|."
 }
 
-%% Bass staff
+% Bass staff
 SaaPagVab = \relative c {
   \key c \major
   \time 3/4
-  \override Staff.TimeSignature.style = #'single-digit
-  \partial 2 c8 d e c  |
+  \partial 2 c8 d e c |
   f2 d4 |
   e2 c4 |
   f4 g g, |
@@ -205,6 +205,7 @@ SaaPagVab = \relative c {
   a8 f g4 g, |
   % This is C minor, but we only want to show 2 flats
   \key g \minor
+  \set Staff.forceClef = ##t
   c2 r4 |
   r4 ees f |
   ees4 f2 |
@@ -235,6 +236,7 @@ SaaPagVab = \relative c {
   g4 g,2 |
   % 80
   \key c \major
+  \set Staff.forceClef = ##t
   c4 r8 c16 d e8 e16 f |
   g8 g d d16 e f8 f16 g |
   a8 a e e16 f g8 g |
@@ -257,9 +259,9 @@ SaaPagVab = \relative c {
   \partial 2 c2 |
 }
 
-%% Figured bass
+% Figured bass
 SaaPagFig = \figuremode {
-  \partial 2 s2  |
+  \partial 2 s2 |
   s2 <6>4 |
   <6>2 s4 |
   <6 5>4 <4> <3> |
@@ -275,7 +277,7 @@ SaaPagFig = \figuremode {
   <7>4 <7> s |
   s2. |
   s2 <6>4 |
-  <7>2  <6>4 |
+  <7>2 <6>4 |
   % 15
   <7>4 <7> s |
   s2. |

@@ -1,0 +1,5 @@
+\version "2.24.2"
+
+% Produce the score up a major second; toKey is interval offset from c.
+toPitch = d
+\include "./corrette-opus5-0-score.ly"

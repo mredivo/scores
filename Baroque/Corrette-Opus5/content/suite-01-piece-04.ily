@@ -1,19 +1,18 @@
 \version "2.24.2"
 
-%% Suite I, 4. Menuet
-%%=============================================================
+% Suite I, 4. Menuet
+%=============================================================
 SaaPadPiece = "IV. Menuet"
-SaaPadOpus = ""
+SaaPadOpus = "Opus 5 Suite I"
 SaaPadMidiTempo = 32
 
-%% Treble staff
+% Treble staff
 SaaPadVaa = \relative c''' {
   % Menuet 1
   \key c \major
   \time 3/4
-  \override Staff.TimeSignature.style = #'single-digit
   \repeat volta 2 {
-    g4 e8 f g4 |
+    g4_\markup { \italic \lower #3 { 1. \hspace #-1 \super r Menuet } } e8 f g4 |
     e4 c g |
     c8 b c d e f |
     d2-+ c4 |
@@ -33,20 +32,20 @@ SaaPadVaa = \relative c''' {
     g4 a8 b c4 |
     %15
     f4 d2-+ |
-    c2. | \fine
+    c2._\markup { \italic \lower #3 Fin. } |
   }
   % Menuet 2
   \key g \minor
   \time 3/4
   \repeat volta 2 {
-    g'4^\markup { \italic  { 2 \super e Menuet } } ees c |
+    g'4_\markup { \italic \lower #3 { 2. \hspace #-1 \super e Menuet } } ees c |
     aes'4 f d |
     g4 f8 ees d c |
     % 20
     b4 a g |
     c4 g ees' |
     d2-+ c4 |
-    b8 c c2 |
+    b8 c c2-+ |
     d2. |
   }
   \repeat volta 2 {
@@ -58,14 +57,14 @@ SaaPadVaa = \relative c''' {
     c8 b c d ees f |
     % 30
     g4 f8 ees d c |
-    d4 g, b |
+    d4 g,_\markup { \italic \lower #3 "au premiere" } b-+ |
     c2. |
   }
   % Menuet 3
   \key c \major
   \time 3/4
   \repeat volta 2 {
-    c8^\markup { \italic  { 3 \super me Menuet } } d e f e f |
+    c8_\markup { \italic \lower #3 { 3. \hspace #-1 \super e Menuet } } d e f e f |
     g4 g8 g g a |
     % 35
     g4 f g |
@@ -84,16 +83,15 @@ SaaPadVaa = \relative c''' {
     % 45
     f4 g8 f e d |
     e4 f8 e d c |
-    d8 e d4.-+ c8 |
+    d8 e_\markup { \italic \lower #3 "au premiere" } d4.-+ c8 |
     c2. |
   }
 }
 
-%% Bass staff
+% Bass staff
 SaaPadVab = \relative c {
   \key c \major
   \time 3/4
-  \override Staff.TimeSignature.style = #'single-digit
   c2. |
   c4 c' b |
   a4 g f |
@@ -120,7 +118,7 @@ SaaPadVab = \relative c {
   f4 bes bes, |
   ees4 f2 |
   % 20
-  g8 a b g  c4 |
+  g8 a b g c4 |
   ees,8 d ees4 c |
   f2 ees4 |
   d4 c2 |
@@ -155,11 +153,11 @@ SaaPadVab = \relative c {
   % 45
   g4 b g |
   c4 a'8 g f e |
-  f4-\markup { \italic  { au premiere } } g g, |
+  f4 g g, |
   c2. |
 }
 
-%% Figured bass
+% Figured bass
 SaaPadFig = \figuremode {
   \time 3/4
   s2. |

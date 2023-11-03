@@ -1,12 +1,12 @@
 \version "2.24.2"
 
-%% Suite I, 6. Tambourin
-%%=============================================================
+% Suite I, 6. Tambourin
+%=============================================================
 SaaPafPiece = "VI. Tambourin"
-SaaPafOpus = ""
+SaaPafOpus = "Opus 5 Suite I"
 SaaPafMidiTempo = 20
 
-%% Treble staff
+% Treble staff
 SaaPafVaa = \relative c''' {
   \key c \major
   \time 2/8
@@ -38,7 +38,7 @@ SaaPafVaa = \relative c''' {
   }
 }
 
-%% Bass staff
+% Bass staff
 SaaPafVab = \relative c {
   \key c \major
   \time 2/8
@@ -66,7 +66,7 @@ SaaPafVab = \relative c {
   c8 c, |
 }
 
-%% Figured bass
+% Figured bass
 SaaPafFig = \figuremode {
   \time 2/8
   s4 |

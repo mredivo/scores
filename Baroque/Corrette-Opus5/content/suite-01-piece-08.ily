@@ -1,20 +1,20 @@
 \version "2.24.2"
 
-%%Suite I, 8. Le Coucou
-%%=============================================================
+%Suite I, 8. Le Coucou
+%=============================================================
 SaaPahPiece = "VIII. Le Coucou"
-SaaPahOpus = ""
+SaaPahOpus = "Opus 5 Suite I"
 SaaPahMidiTempo = 28
 
-%% Treble staff
+% Treble staff
 SaaPahVaa = \relative c''' {
   \key c \major
   \time 9/8
   \repeat volta 2 {
-    \partial 8 g8 |
+    \partial 8 g8_\markup { \italic \lower #3 Gaiment } |
     e4 c8 c b c d4 g8 |
     e4 c8 c b c d4 g8 |
-    e8 f g f g  f e f e |
+    e8 f g f g f e f e |
     d4-+ g,8 c4 g8 d'4 g8 |
     % 5
     e4 c8 c b c d4 g8 |
@@ -61,7 +61,7 @@ SaaPahVaa = \relative c''' {
   }
 }
 
-%% Bass staff
+% Bass staff
 SaaPahVab = \relative c {
   \key c \major
   \time 9/8
@@ -90,8 +90,8 @@ SaaPahVab = \relative c {
   c4 e,8 c4 c'8 b4 g8 |
   % 20
   c4 e,8 c4 g'8 c4 r8 |
-  r8 r g' e4 r8 r4. |
-  r8 r e c4 r8 r4. |
+  r8 r g' e4 r8 r4 r8 |
+  r8 r e c4 r8 r4 r8 |
   r8 r e c4 e8 c4 e,8 |
   c4 r8 r r e c4 r8 |
   % 25
@@ -112,7 +112,7 @@ SaaPahVab = \relative c {
   \partial 1 c4. c, r8 r |
 }
 
-%% Figured bass
+% Figured bass
 SaaPahFig = \figuremode {
   \time 9/8
   \partial 8 s8 |

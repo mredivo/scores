@@ -1,12 +1,12 @@
 \version "2.24.2"
 
-%% Suite I, 5. Fanfare
-%%=============================================================
+% Suite I, 5. Fanfare
+%=============================================================
 SaaPaePiece = "V. Fanfare"
-SaaPaeOpus = ""
+SaaPaeOpus = "Opus 5 Suite I"
 SaaPaeMidiTempo = 36
 
-%% Treble staff
+% Treble staff
 SaaPaeVaa = \relative c'' {
   \key c \major
   \time 6/8
@@ -23,7 +23,7 @@ SaaPaeVaa = \relative c'' {
   }
   \repeat volta 2 {
     \partial 8 g8 |
-    g8 f e d e f  |
+    g8 f e d e f |
     e8 d e c4 e8 |
     e8 d c b c d |
     c4 g8 c4 d8 |
@@ -34,9 +34,9 @@ SaaPaeVaa = \relative c'' {
     e8 c d e d c |
     d8 b c d c b |
     c8 c d e e f |
-    g4 r8 r4. |
+    g4 r8 r4 r8 |
     r8 b, c d d e |
-    f4 r8 r4. |
+    f4 r8 r4 r8 |
     r8 a, b c c d |
     e8 e f g g a |
     d,4 g8 d e f |
@@ -46,7 +46,7 @@ SaaPaeVaa = \relative c'' {
   }
 }
 
-%% Bass staff
+% Bass staff
 SaaPaeVab = \relative c {
   \key c \major
   \partial 8 r8 |
@@ -71,17 +71,17 @@ SaaPaeVab = \relative c {
   f8 d e f e d |
   e4 c8 c4 r8 |
   r8 c d e e f |
-  g4 r8 r4. |
+  g4 r8 r4 r8 |
   r8 b, c d d e |
-  f4 r8 r4. |
+  f4 r8 r4 r8 |
   r8 c d e e f |
-  g4 r8 r4 g8 |
+  g4 r8 r r g |
   c4 c8 b4 g8 |
   c4 c,8 g'4 g,8 |
   c2 r4 |
 }
 
-%% Figured bass
+% Figured bass
 SaaPaeFig = \figuremode {
   \partial 8 s8 |
   s4. s |

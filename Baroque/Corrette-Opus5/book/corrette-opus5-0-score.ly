@@ -2,7 +2,14 @@
 
 \include "../include/site-parameters.ily"
 \include "../include/baroque-paper.ily"
+\include "../include/transpose.ily"
 \include "../include/midi.ily"
+
+% Cover page handling: We use separate numbering for the cover page, so we
+% want the first page number to appear on the first page of music.
+\paper {
+  print-first-page-number = ##t
+}
 
 % For development, we want the line breaks to match the source manuscript.
 % To achieve this, we use a smaller staff size and insert a macro \mBreak
@@ -27,19 +34,21 @@ staffGlobalSettings = {
   \override Voice.NoteHead.style = #'baroque
   \override Accidental.hide-tied-accidental-after-break = ##t
 
-  \numericTimeSignature
   \compressEmptyMeasures
 }
 
 % Staff A settings should be applied to every treble staff.
 staffASettings = {
   %\set Staff.instrumentName = #"Text"
-  \clef french  % Original is french clef.
+  \override TupletBracket.bracket-visibility = ##t
+  \clef treble % Original is french clef.
 }
 
 % Staff B settings should be applied to every bass staff.
 staffBSettings = {
   %\set Staff.instrumentName = #"Text"
+  \override TupletBracket.bracket-visibility = ##t
+  \override FiguredBass.BassFigure.font-size = 0
   \clef bass
 }
 
@@ -48,7 +57,7 @@ staffBSettings = {
   \include "../titles.ily"
 }
 
-% Include all the music for each suite
+% Include the music for suite I
 \include "../content/suite-01-piece-01.ily"
 \include "../content/suite-01-piece-02.ily"
 \include "../content/suite-01-piece-03.ily"
@@ -58,35 +67,82 @@ staffBSettings = {
 \include "../content/suite-01-piece-07.ily"
 \include "../content/suite-01-piece-08.ily"
 
+% Include the music for suite II
+\include "../content/suite-02-piece-01.ily"
+\include "../content/suite-02-piece-02.ily"
+\include "../content/suite-02-piece-03.ily"
+\include "../content/suite-02-piece-04.ily"
+\include "../content/suite-02-piece-05.ily"
+\include "../content/suite-02-piece-06.ily"
+
+% Include the music for suite III
+\include "../content/suite-03-piece-01.ily"
+\include "../content/suite-03-piece-02.ily"
+\include "../content/suite-03-piece-03.ily"
+\include "../content/suite-03-piece-04.ily"
+\include "../content/suite-03-piece-05.ily"
+
+% Include the music for suite IV
+\include "../content/suite-04-piece-01.ily"
+\include "../content/suite-04-piece-02.ily"
+\include "../content/suite-04-piece-03.ily"
+\include "../content/suite-04-piece-04.ily"
+\include "../content/suite-04-piece-05.ily"
+
 % Build the book by gathering all the suites
 \book {
 
+  % Print the cover page by creating a separate bookpart for it.
+  \bookpart {
+    \paper {
+      % We don't want to print page numbers on the cover page
+      print-page-number = ##f
+      % This trick makes the copyright print on the back of the cover page
+      first-page-number = #0
+      % We want the first music bookpart to start numbering the pages at 1
+      bookpart-level-page-numbering = ##t
+    }
+    \include "../content/opus-cover.ily"
+  }
+
   \bookpart {
     \header {
-      subsubtitle = "Suite I"
+      title = ##f
+      composer = ##f
+      subtitle = "Suite I"
     }
+    \tocSubtitle suite "Suite I"
     \include "./corrette-opus5-0-score-suite-01.ily"
   }
 
   \bookpart {
     \header {
-      subsubtitle = "Suite II"
+      title = ##f
+      composer = ##f
+      subtitle = "Suite II"
     }
-    %\include "./corrette-opus5-0-score-suite-02.ily"
+    \tocSubtitle suite "Suite II"
+    \include "./corrette-opus5-0-score-suite-02.ily"
   }
 
   \bookpart {
     \header {
-      subsubtitle = "Suite III"
+      title = ##f
+      composer = ##f
+      subtitle = "Suite III"
     }
-    %\include "./corrette-opus5-0-score-suite-03.ily"
+    \tocSubtitle suite "Suite III"
+    \include "./corrette-opus5-0-score-suite-03.ily"
   }
 
   \bookpart {
     \header {
-      subsubtitle = "Suite IV"
+      title = ##f
+      composer = ##f
+      subtitle = "Suite IV"
     }
-    %\include "./corrette-opus5-0-score-suite-04.ily"
+    \tocSubtitle suite "Suite IV"
+    \include "./corrette-opus5-0-score-suite-04.ily"
   }
 
 }

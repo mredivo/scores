@@ -1,17 +1,17 @@
 \version "2.24.2"
 
-%% Suite I, 2. Vivement
-%%=============================================================
+% Suite I, 2. Vivement
+%=============================================================
 SaaPabPiece = "II. Vivement"
-SaaPabOpus = ""
+SaaPabOpus = "Opus 5 Suite I"
 SaaPabMidiTempo = 20
 
-%% Treble staff
+% Treble staff
 SaaPabVaa = \relative c''' {
   \key c \major
   \time 2/4
   \repeat volta 2 {
-    \partial 4 g8. g16 |
+    \partial 4 g8._\markup { \italic \lower #3 Canon } g16 |
     c8 c, d16 e f d |
     e8 c4 b8 |
     c8 e d g |
@@ -26,7 +26,7 @@ SaaPabVaa = \relative c''' {
   }
 }
 
-%% Bass staff
+% Bass staff
 SaaPabVab = \relative c' {
   \key c \major
   \time 2/4
@@ -46,7 +46,7 @@ SaaPabVab = \relative c' {
   }
 }
 
-%% Figured bass
+% Figured bass
 SaaPabFig = \figuremode {
   \repeat volta 2 {
     \partial 4 s4 |
@@ -58,7 +58,7 @@ SaaPabFig = \figuremode {
   \repeat volta 2 {
     \partial 4 s4 |
     s4 <6 4>8. s16 |
-    <4 2>4 <6>4  |
+    <4 2>4 <6>4 |
     <6>4 s4 |
     \partial 4 s4 |
   }
