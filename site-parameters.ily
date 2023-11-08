@@ -1,7 +1,7 @@
 \version "2.24.2"
 
 % Bring in various local shortcuts and helpers.
-\include "./include/sysutil.ily"
+\include "sysutil.ily"
 
 % Lilypond default paper size is a4; override it globally here.
 %#(set-default-paper-size "letter")
